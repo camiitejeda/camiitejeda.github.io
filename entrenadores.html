@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/header.css" />
+  <link rel="stylesheet" href="styles/entrenadores.css" />
+  <link rel="stylesheet" href="styles/loader.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Special+Gothic+Condensed+One&display=swap" rel="stylesheet" />
+  <title>Entrenadores</title>
+</head>
+<body>
+
+  <!-- Loader -->
+  <div id="loader-wrapper" class="fade-out">
+    <div class="wrapper">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="shadow"></div>
+      <div class="shadow"></div>
+      <div class="shadow"></div>
+    </div>
+  </div>
+
+  <!-- Header con imagen de fondo -->
+  <header class="header">
+    <img src="images/imagen.png" alt="Fondo" class="img-fondo" />
+    <div class="container">
+      <nav class="menu">
+        <input type="checkbox" id="toggle-menu" hidden />
+        <label for="toggle-menu" class="desplegar"><span> ☰ </span></label>
+        <ul class="mega-menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="clases.html">Clases</a></li>
+          <li><a href="entrenadores.html">Entrenadores</a></li>
+          <li><a href="precios.html">Precios</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Sección Entrenadores -->
+  <section class="entrenadores">
+    <div class="video-titulo">
+        <video src="videos/entrenadores.mp4" autoplay muted loop playsinline></video>
+      </div>
+
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <h2>Entrenador 1</h2>
+          <p>Especialidad: Fitness</p>
+          <div class="skill-bar">
+            <div class="skill" style="width: 90%;">Fuerza 90%</div>
+          </div>
+        </div>
+        <div class="card-back">
+          <h2>Detalles</h2>
+          <p>Experiencia: 5 años</p>
+          <p>Certificaciones: A, B, C</p>
+          <div class="rating-card">
+            <span class="star" data-value="1">&#9733;</span>
+            <span class="star" data-value="2">&#9733;</span>
+            <span class="star" data-value="3">&#9733;</span>
+            <span class="star" data-value="4">&#9733;</span>
+            <span class="star" data-value="5">&#9733;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <h2>Entrenador 2</h2>
+          <p>Especialidad: Yoga</p>
+          <div class="skill-bar">
+            <div class="skill" style="width: 80%;">Flexibilidad 80%</div>
+          </div>
+        </div>
+        <div class="card-back">
+          <h2>Detalles</h2>
+          <p>Experiencia: 3 años</p>
+          <p>Certificaciones: D, E</p>
+          <div class="rating-card">
+            <span class="star" data-value="1">&#9733;</span>
+            <span class="star" data-value="2">&#9733;</span>
+            <span class="star" data-value="3">&#9733;</span>
+            <span class="star" data-value="4">&#9733;</span>
+            <span class="star" data-value="5">&#9733;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Podés agregar más tarjetas acá -->
+  </section>
+
+  <script>
+    // Script simple para marcar estrellas seleccionadas
+    document.querySelectorAll('.rating-card').forEach(rating => {
+      rating.addEventListener('click', e => {
+        if (e.target.classList.contains('star')) {
+          const stars = rating.querySelectorAll('.star');
+          stars.forEach(star => star.classList.remove('selected'));
+          let selected = false;
+          for (const star of stars) {
+            star.classList.add('selected');
+            if (star === e.target) break;
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>

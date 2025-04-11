@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparador de Planes</title>
+    <link rel="stylesheet" href="styles/precios.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Planes y Precios</h1>
+        <div class="toggle-container">
+            <label class="toggle">
+                <input type="checkbox" id="toggle">
+                <span class="slider"></span>
+            </label>
+            <span class="toggle-label">Mensual</span>
+            <span class="toggle-label">Anual</span>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Plan</th>
+                    <th class="price monthly">Precio Mensual</th>
+                    <th class="price annual">Precio Anual</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Plan Básico</td>
+                    <td class="monthly">$10 <span class="tooltip">Incluye acceso ilimitado</span></td>
+                    <td class="annual">$100 <span class="tooltip">Incluye acceso ilimitado</span></td>
+                </tr>
+                <tr>
+                    <td>Plan Pro</td>
+                    <td class="monthly">$20 <span class="tooltip">Incluye soporte prioritario</span></td>
+                    <td class="annual">$200 <span class="tooltip">Incluye soporte prioritario</span></td>
+                </tr>
+                <tr>
+                    <td>Plan Premium</td>
+                    <td class="monthly">$30 <span class="tooltip">Incluye todas las características</span></td>
+                    <td class="annual">$300 <span class="tooltip">Incluye todas las características</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
