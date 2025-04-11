@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/header.css" />
+  <link rel="stylesheet" href="styles/loader.css" />
+  <link rel="stylesheet" href="styles/hero.css" />
+  <link rel="stylesheet" href="styles/clasesdestacadas.css" />
+  <link rel="stylesheet" href="styles/contador.css">
+  <link rel="stylesheet" href="styles/carrusel.css" />
+  <link rel="stylesheet" href="styles/testimonios.css" />
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Special+Gothic+Condensed+One&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <title>Gimnasio</title>
+</head>
+<body>
+
+    <div id="loader-wrapper" class="fade-out">
+        <div class="wrapper">
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="shadow"></div>
+          <div class="shadow"></div>
+          <div class="shadow"></div>
+        </div>
+      </div>
+      
+
+      <header class="header">
+        <img src="images/imagen.png" alt="Fondo" class="img-fondo" />
+
+        <div class="container">
+          <nav class="menu">
+            <input type="checkbox" id="toggle-menu" hidden />
+            <label for="toggle-menu" class="desplegar"><span> ☰ </span></label>
+            <ul class="mega-menu">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="clases.html">Clases</a></li>
+              <li><a href="entrenadores.html">Entrenadores</a></li>
+              <li><a href="precios.html">Precios</a></li>
+              <li><a href="blog.html">Blog</a></li>
+            </ul>
+          </nav>
+      
+        </div>
+      </header>
+
+
+
+      <section class="hero">
+        <div class="col" name="columna1">
+          <video src="videos/columna.mp4" autoplay muted loop playsinline></video>
+        </div>
+        <div class="col" name="columna2">
+          
+          <div class="card-container">
+            <div class="blob-bouncer">
+              <div class="blob-bouncing"></div>
+            </div>
+        
+            <div class="card">
+              <div class="bg"></div>
+              <div class="video-container">
+                <video autoplay muted loop playsinline>
+                  <source src="videos/video hero.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <div class="overlay">
+                <h1>¡Transforma tu vida!</h1>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="col" name="columna3">
+          <video src="videos/columna.mp4" autoplay muted loop playsinline></video>
+        </div>
+      </section>
+  
+  <section class="clases-destacadas">
+    <div class="video-titulo">
+      <video src="videos/clases.mp4" autoplay muted loop playsinline></video>
+    </div>
+  
+    <div class="cards">
+      <div class="card red">
+        <h2>Yoga</h2>
+        <p>Mejora tu flexibilidad y bienestar.</p>
+      </div>
+      <div class="card blue">
+        <h2>CrossFit</h2>
+        <p>Entrenamiento intenso para todos.</p>
+      </div>
+      <div class="card green">
+        <h2>Spinning</h2>
+        <p>Quema calorías mientras te diviertes.</p>
+      </div>
+    </div>
+  </section>
+
+<section class="contador">
+  <h2 class="count">500+</h2>
+  <p>socios satisfechos</p>
+</section>
+
+<section class="testimonios">
+  <h2>Testimonios</h2>
+  <div class="carrusel">
+    <div class="testimonio">"¡Me encanta este gimnasio!" - Juan</div>
+    <div class="testimonio">"Los entrenadores son increíbles." - Ana</div>
+    <div class="testimonio">"He mejorado mucho mi salud." - Pedro</div>
+  </div>
+</section>
+
+  <footer>
+    <form>
+      <label for="email">Suscríbete a nuestro newsletter:</label>
+      <input type="email" id="email" placeholder="Tu correo electrónico" />
+      <button type="submit">Suscribirse</button>
+    </form>
+    <div class="redes-sociales">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">Twitter</a>
+    </div>
+    <div class="mapa">
+      <iframe src="https://www.google.com/maps/embed?pb=..." width="600" height="450" style="border:0;" allowfullscreen loading="lazy"></iframe>
+    </div>
+    <p>&copy; 2023 Gimnasio. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
