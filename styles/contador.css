@@ -1,0 +1,31 @@
+.contador {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f4f4f4; /* Color de fondo opcional */
+}
+
+.count {
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 48px; /* Tamaño del número */
+    font-weight: bolder; /* Negrita */
+    color: #654ebb; /* Color del número */
+    margin: 0; /* Elimina el margen */
+    animation: pulseAnimation 1.5s infinite; /* Aplica la animación en bucle */
+}
+
+.contador p{
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: bold;
+}
+
+@keyframes pulseAnimation {
+    0% {
+        transform: scale(1); /* Tamaño original */
+    }
+    50% {
+        transform: scale(1.1); /* Aumenta el tamaño */
+    }
+    100% {
+        transform: scale(1); /* Regresa al tamaño original */
+    }
+}

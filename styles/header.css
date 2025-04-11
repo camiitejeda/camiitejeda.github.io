@@ -1,0 +1,96 @@
+/* Ajustes generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body, html {
+  height: 100%;
+}
+
+/* HEADER con imagen de fondo */
+.header {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  overflow: hidden;
+}
+
+/* Imagen de fondo */
+.img-fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto; /* ⬅️ Mantenemos la altura proporcional */
+  object-fit: contain; /* ⬅️ Que se vea entera, aunque deje espacio */
+  z-index: -1;
+}
+
+
+/* Contenedor principal dentro del header */
+.header .container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 2rem;
+  margin-top: -50px; /* opcional */
+}
+
+/* Botón menú hamburguesa */
+.menu {
+  position: relative;
+}
+
+.desplegar {
+  background: none;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.desplegar span {
+  font-weight: 700;
+  font-family: 'Special Gothic Condensed One', sans-serif;
+  font-size: 20px;
+}
+
+/* Menú desplegable */
+.mega-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #634ebb;
+  padding: 10px;
+  border-radius: 10px;
+  list-style: none;
+}
+
+#toggle-menu:checked + label + .mega-menu {
+  display: block;
+}
+
+.mega-menu li {
+  margin: 10px 0;
+}
+
+.mega-menu li a {
+  color: white;
+  text-decoration: none;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.desplegar:hover .mega-menu {
+  display: block;
+} 

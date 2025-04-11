@@ -1,0 +1,99 @@
+.boldonse-regular {
+  font-family: "Boldonse", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.video-titulo {
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+}
+
+.video-titulo video {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* muestra el video completo sin recortes */
+  display: block;
+}
+
+
+.cards {
+  display: flex;
+  padding: 3%;
+  gap: 40px;
+  justify-content: center;  /* Centra horizontalmente */
+  align-items: center;
+}
+
+.cards .card {
+  position: relative; /* Asegúrate de que el contenedor de la tarjeta tenga posición relativa */
+  width: 200px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition: 400ms;
+  background-color: rgba(65, 65, 65, 0.11);
+  border: 1px solid rgba(144, 161, 255, 0.171);
+  backdrop-filter: blur(30px);
+}
+
+.card::before,
+.card::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background-color: #653ebb;
+  filter: blur(50px);
+  z-index: 0; /* Coloca el pseudo-elemento detrás del contenido */
+}
+
+.card::before {
+  width: 7rem;
+  height: 7rem;
+  top: 20%;
+  left: 50%; /* Centra horizontalmente */
+  transform: translateX(-50%); /* Ajusta la posición */
+}
+
+.card::after {
+  width: 10rem; /* Ajusta el tamaño según sea necesario */
+  height: 10rem; /* Ajusta el tamaño según sea necesario */
+  top: 50%; /* Ajusta la posición */
+  left: 50%; /* Centra horizontalmente */
+  transform: translate(-50%, -50%); /* Ajusta la posición */
+}
+
+.cards .card h2 {
+  font-size: 1em;
+  font-weight: 1000;
+  text-align: center;
+  z-index: 1; /* Asegúrate de que el texto esté por encima del desenfoque */
+  position: relative; /* Asegúrate de que el texto esté en el contexto de la tarjeta */
+  color: #f4f4f4;
+}
+
+.cards .card p {
+  font-size: 0.6em;
+  padding: 4px;
+  text-align: center;
+  z-index: 1; /* Asegúrate de que el texto esté por encima del desenfoque */
+  position: relative;
+  color: #f4f4f4;
+}
+
+.cards .card:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.cards:hover > .card:not(:hover) {
+  filter: blur(5px);
+  transform: scale(0.9, 0.9);
+}

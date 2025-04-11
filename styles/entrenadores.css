@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Sección Entrenadores */
+  .entrenadores {
+    text-align: center;
+  }
+
+  .video-titulo {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+  }
+  
+  .video-titulo video {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* muestra el video completo sin recortes */
+    display: block;
+  }
+  
+  .card {
+    width: 300px;
+    height: 440px;
+    perspective: 1000px;
+    display: inline-block;
+    margin: 20px;
+  }
+  
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  .card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .card-front {
+    background: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card-back {
+    background: #643ebb;
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Barras de habilidades dentro de la card-front */
+  .skill-bar {
+    width: 100%;
+    background: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 15px;
+  }
+  
+  .skill {
+    height: 30px;
+    background: #110037;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    transition: width 1s ease;
+  }
+  
+  /* Estrellas de calificación dentro de la card-back */
+  .rating-card {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+  
+  .rating-card .star {
+    font-size: 24px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .rating-card .star:hover,
+  .rating-card .star:hover ~ .star {
+    color: #f39c12;
+  }
+  
+  .rating-card .star.selected {
+    color: #f39c12;
+  }
+  
